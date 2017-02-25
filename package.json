@@ -1,0 +1,11 @@
+{
+  "name": "puck-mqtt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:benfoxall/puck-mqtt.git",
+  "author": "Ben Foxall <benfoxall@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "noble": "^1.8.0"
+  }
+}
