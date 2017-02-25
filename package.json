@@ -6,6 +6,10 @@
   "author": "Ben Foxall <benfoxall@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "commander": "^2.9.0",
     "noble": "^1.8.0"
+  },
+  "bin": {
+    "puck-mqtt": "./bin/puck-mqtt.js"
   }
 }
