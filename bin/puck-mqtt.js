@@ -15,7 +15,7 @@ program
   .parse(process.argv)
 
 
-const host = program.host || 'test.mosquitto.org'
+const host = program.host || 'mqtt://test.mosquitto.org'
 const puck = program.puck
 
 console.log(chalk.cyan(`
