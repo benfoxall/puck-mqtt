@@ -3,11 +3,11 @@
 const program = require('commander')
 const version = require('../package.json').version
 
+const pmqt = require('../')
+
 program
   .command('scan')
-  .action(() => {
-    console.log('TODO: scan');
-  })
+  .action(() => pmqt.scan())
 
 program
   .command('connect [Address...]')
