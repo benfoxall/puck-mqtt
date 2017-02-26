@@ -19,7 +19,12 @@ const host = program.host || 'test.mosquitto.org'
 const puck = program.puck
 
 console.log(chalk.cyan(`
- Forwarding ${puck.size ? Array.from(puck) : 'any pucks'} to ${host}
+➥ Forwarding ${puck.size ? Array.from(puck) : 'any pucks'} to ${host}
 `))
 
-pmqt.scan2(puck, host)
+// add normalised puck names
+Array.from(puck)
+  .filter(n => n.match(/^[0-f]{4}$/))
+  .forEach(n => puck.add(`Puck.js ${n.toLowerCase()}`))
+
+pmqt(puck, host)
