@@ -11,11 +11,11 @@ program
 
 program
   .command('connect [Address...]')
-  .action(pucks => {
-    pucks.forEach(puck => {
-      console.log('TODO: connect %s', puck);
-    })
-  })
+  .action(pucks =>
+    pucks.forEach(
+      puck => pmqt.connect(puck)
+    )
+  )
 
 program
   .version(version)
