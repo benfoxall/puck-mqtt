@@ -12,12 +12,17 @@ The difference with this:
 ## Running
 
 ```bash
-# find any connectable pucks around
-puck-mqtt scan
+# connect any pucks found to test.mosquitto.org
+puck-mqtt
 
+# connect to your own server
+puck-mqtt -h mqtt://test.example.org
 
-# connect to a puck
-puck-mqtt connect 123long0hash0no0dashes123
+# only connect "Puck.js 1f10" and "Puck.js bf82"
+puck-mqtt -p af10 -p bf82
+
+# or, using longer hash (note, no dashes)
+puck-mqtt -p 7597340abcdf1097848fd39ecd6291cb12
 ```
 
 ## Puck.js code
