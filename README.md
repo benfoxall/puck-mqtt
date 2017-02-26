@@ -71,6 +71,15 @@ Message handlers are called by injecting:
 
 Each puck is connected to an individual mqtt connection.
 
+### todo
+
+* look at reconnections
+* check for handler & subs, display warning if not found
+* handle case where > 6 pucks
+* live ui
+  * connection states
+  * battery levels
+
 ### Resources
 
 A lot of the connection logic comes via:
